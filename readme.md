@@ -1,103 +1,42 @@
-<h1>Desafio de projeto do Felipão: Mario Kart.JS</h1>
+ 🏎️ Mario Kart CLI Simulator
 
-  <table>
-        <tr>
-            <td>
-                <img src="./docs/header.gif" alt="Mario Kart" width="200">
-            </td>
-            <td>
-                <b>Objetivo:</b>
-                <p>Mario Kart é uma série de jogos de corrida desenvolvida e publicada pela Nintendo. Nosso desafio será criar uma lógica de um jogo de vídeo game para simular corridas de Mario Kart, levando em consideração as regras e mecânicas abaixo.</p>
-            </td>
-        </tr>
-    </table>
+Este é um simulador de Mario Kart direto e divertido para você rodar no terminal. Nele, **Mario e Luigi** se enfrentam em uma corrida de 5 rodadas, cada uma com um desafio diferente.
 
-<h2>Players</h2>
-      <table style="border-collapse: collapse; width: 800px; margin: 0 auto;">
-        <tr>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Mario</p>
-                <img src="./docs/mario.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 4</p>
-                <p>Manobrabilidade: 3</p>
-                <p>Poder: 3</p>
-            </td>
-             <td style="border: 1px solid black; text-align: center;">
-                <p>Peach</p>
-                <img src="./docs/peach.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 3</p>
-                <p>Manobrabilidade: 4</p>
-                <p>Poder: 2</p>
-            </td>
-              <td style="border: 1px solid black; text-align: center;">
-                <p>Yoshi</p>
-                <img src="./docs/yoshi.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 2</p>
-                <p>Manobrabilidade: 4</p>
-                <p>Poder: 3</p>
-            </td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Bowser</p>
-                <img src="./docs/bowser.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 5</p>
-                <p>Manobrabilidade: 2</p>
-                <p>Poder: 5</p>
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Luigi</p>
-                <img src="./docs/luigi.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 3</p>
-                <p>Manobrabilidade: 4</p>
-                <p>Poder: 4</p>
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Donkey Kong</p>
-                <img src="./docs/dk.gif" alt="Mario Kart" width="60" height="60">
-            </td>
-            <td style="border: 1px solid black; text-align: center;">
-                <p>Velocidade: 2</p>
-                <p>Manobrabilidade: 2</p>
-                <p>Poder: 5</p>
-            </td>
-        </tr>
-    </table>
+---
 
-<p></p>
+## 🎮 Como Jogar
 
-<h3>🕹️ Regras & mecânicas:</h3>
+É simples! Certifique-se de ter **Node.js** instalado e execute o arquivo principal do seu projeto. Se o seu código está em `index.js`, por exemplo:
 
-<b>Jogadores:</b>
+```bash
+node index.js
+A corrida vai acontecer rodada a rodada, mostrando o que acontece e quem pontua.
 
-<input type="checkbox" id="jogadores-item" />
-<label for="jogadores-item">O Computador deve receber dois personagens para disputar a corrida em um objeto cada</label>
+✨ O que rola no jogo
+Personagens: Mario e Luigi, cada um com suas forças em Velocidade, Manobrabilidade e Poder.
 
-<b>Pistas:</b>
+5 Rodadas de Pura Competição: Cada rodada um tipo de bloco é sorteado, exigindo diferentes habilidades dos pilotos.
 
-<ul>
-  <li><input type="checkbox" id="pistas-1-item" /> <label for="pistas-1-item">Os personagens irão correr em uma pista aleatória de 5 rodadas</label></li>
-  <li><input type="checkbox" id="pistas-2-item" /> <label for="pistas-2-item">A cada rodada, será sorteado um bloco da pista que pode ser uma reta, curva ou confronto</label>
-    <ul>
-      <li><input type="checkbox" id="pistas-2-1-item" /> <label for="pistas-2-1-item">Caso o bloco da pista seja uma RETA, o jogador deve jogar um dado de 6 lados e somar o atributo VELOCIDADE, quem vencer ganha um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-2-item" /> <label for="pistas-2-2-item">Caso o bloco da pista seja uma CURVA, o jogador deve jogar um dado de 6 lados e somar o atributo MANOBRABILIDADE, quem vencer ganha um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-3-item" /> <label for="pistas-2-3-item">Caso o bloco da pista seja um CONFRONTO, o jogador deve jogar um dado de 6 lados e somar o atributo PODER, quem perder, perde um ponto</label></li>
-      <li><input type="checkbox" id="pistas-2-3-item" /> <label for="pistas-2-3-item">Nenhum jogador pode ter pontuação negativa (valores abaixo de 0)</label></li>
-    </ul>
-  </li>
-</ul>
+Tipos de Bloco:
 
-<b>Condição de vitória:</b>
+RETA: Quem tem mais velocidade (dado + velocidade) ganha 1 ponto.
 
-<input type="checkbox" id="vitoria-item" />
-<label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
+CURVA: A manobrabilidade é a chave. Quem se sair melhor (dado + manobrabilidade) leva 1 ponto.
+
+CONFRONTO: A briga é boa! Quem tiver mais poder (dado + poder) vence e ganha um TURBO (+1 ponto). O perdedor azarado pode pegar um CASCO (-1 ponto) ou uma BOMBA (-2 pontos). Ninguém perde ponto se já estiver com 0. Se empatar, ninguém ganha ou perde.
+
+Vencedor: No fim das 5 rodadas, quem tiver mais pontos leva a taça! Empate significa que ninguém venceu.
+
+🛠️ Por baixo do capô
+O jogo foi feito em JavaScript usando Node.js.
+
+🚀 Ideias para o futuro
+Quer deixar o simulador ainda mais maneiro? Pense em:
+
+Mais personagens e karts!
+
+Itens surpresa para pegar na pista.
+
+Pistas diferentes que mudem a estratégia.
+
+Quem sabe uma versão com gráficos e sons?
