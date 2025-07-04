@@ -1,6 +1,6 @@
- # 🏎️ Meu Simulador de Mario Kart CLI
+ # 🏎️ Meu Simulador de Mario Kart 
 
-E aí! Quero apresentar meu projeto: um simulador simplificado de Mario Kart, feito pra rodar direto no terminal. Nele, **Mario e Luigi** se enfrentam numa corrida de 5 rodadas, cheia de momentos emocionantes e, claro, confrontos!
+Oiii! Quero apresentar meu projeto: um simulador simplificado de Mario Kart, feito pra rodar direto no terminal. Nele, **Mario e Luigi** se enfrentam numa corrida de 5 rodadas, cheia de momentos emocionantes e, claro, confrontos!
 
 ---
 
@@ -29,3 +29,6 @@ Quem Ganha? No final das 5 rodadas, o piloto com mais pontos é o grande vencedo
 
 🛠️ A Tecnologia Por Trás
 Eu construí este simulador usando JavaScript e ele roda com Node.js.
+
+💻 O projeto
+O projeto é baseado no desafio do bootcamp meutudo - Mobile Developer, uma parceria da DIO e com a peoplemeutudo, junto com o professor filipão, exploramos o mundo do java script e seus conceitos mais importantes.
